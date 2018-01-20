@@ -30,6 +30,31 @@ if(isset($_SESSION["user"])){
 
 ?>
 
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-4 col-md-offset-7">
+                                    <div class="form-login">
+                                        <h4>Bienvenido</h4>
+                                        <input type="text" id="user" class="form-control input-sm"/>
+                                        </br>
+                                        <input type="password" id="password" class="form-control input-sm"/>
+                                        </br>
+                                        <div class="wrapper">                                                
+                                            <input type="button" name="login" id="login" value="Login" class="btn btn-primary btn-sm">                                            
+                                        </div>
+                                    </div>
+                                    <span id="result"></span>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+    
+</body>
+
 <script>
     $(document).ready(function(){
         $('#login').click(function(){
@@ -64,29 +89,4 @@ if(isset($_SESSION["user"])){
     });
     
 </script>
-
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="col-md-4 col-md-offset-7">
-                                    <div class="form-login">
-                                        <h4>Bienvenido</h4>
-                                        <input type="text" id="user" class="form-control input-sm"/>
-                                        </br>
-                                        <input type="password" id="password" class="form-control input-sm"/>
-                                        </br>
-                                        <div class="wrapper">                                                
-                                            <input type="button" name="login" id="login" value="Login" class="btn btn-primary btn-sm">                                            
-                                        </div>
-                                    </div>
-                                    <span id="result"></span>
-				
-				</div>
-			</div>
-		</div>
-	</div>
-    
-</body>
-
 
