@@ -1,23 +1,34 @@
 <?php
 
-session_start();
+$mysqli = new mysqli('localhost:8080','root','','ipm_ale');
+if($mysqli->connect_errno):
+  echo "Erro al conectarse con MySQL debido al error".$mysqli->connect_errno;
+endif;
 
-$connect = mysql_connect("127.0.0.1:8383","root",PASSWORD("monografia"),"ipm_ale");
 
-if(isset($_POST["user"]) && isset($_POST["password"])){
-    $user = mysqli_real_escape_string($connect, $_POST["user"]);    
-    $password = mysqli_real_escape_string($connect, $_POST["password"]);
-    
-    $sql = "SELECT Username FROM Usuario WHERE Username='$user' && Password=PASSWORD('$password')";
-    $result = mysqli_query($connect, $sql);
-    $num_row = mysqli_num_rows($result);
-    if($num_row=="1"){
-        $data = mysqli_fetch_array($result);
-        $_SESSION["user"] = $data["user"];
-        echo "1";
-    }else{
-        echo "error";        
-    }
-}else{
-    echo "error";
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH'])== 'xmlhttprequest'){
+
+  $mysqli->set_charset('utf8');
+
+  $usuario = $mysqli->mysqli_real_escape_string($_POST['user']);
+  $password  = $mysqli->mysqli_real_escape_string(PASSWORD($_POST['password']));
+
+  if($nueva_consulta = $mysqli->prepare("SELECT Username FROM usuario WHERE Username=? AND Password=?")){
+      $nueva_consulta->bind_param('ss',$usuario,$password);
+      $nueva_consulta->execute();
+
+      $resultado = $nueva_consulta->get_result();
+
+      if($resultado->num_rows==1){
+        $datos = $resultado->fetch_assoc();
+        echo json_encode(array('error'-> false));
+      }else{
+        echo json_encode(array('error'->true));
+      }
+
+      $nueva_consulta->close();
+  }
+
 }
+
+?>

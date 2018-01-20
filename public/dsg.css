@@ -4,8 +4,8 @@ body {
   background-size: cover;
 }
 
-.form-login {
-    background-color: rgba(249, 249, 249, 0.4);
+.form-login{
+    background-color: rgba(249, 249, 249, 0.4)!important;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
