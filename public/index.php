@@ -74,7 +74,7 @@ if(isset($_SESSION["user"])){
                                         <h4>Bienvenido</h4>
                                         <input type="text" id="user" class="form-control input-sm chat-input" placeholder="user" />
                                         </br>
-                                        <input type="text" id="password" class="form-control input-sm chat-input" placeholder="user" />
+                                        <input type="password" id="password" class="form-control input-sm chat-input" placeholder="password" />
                                         </br>
                                         <div class="wrapper">
                                             <span class="group-btn">     
