@@ -1,17 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400);
 body {
-  background-color:#fff;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
-}
-
-.container {
-    padding: 25px;
-    position: fixed;
+  background: url("fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .form-login {
-    background-color: #80ccff;
+    background-color: rgba(249, 249, 249, 0.4);
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -21,9 +15,17 @@ body {
     border-width: 5px;
     box-shadow:0 1px 0 #cfcfcf;
 }
+.center{
+  left:25%;
+  width:50%;
+  height:50%;
+  top:25%;
+  position:absolute;
+  text-align:center;
+}
 
-h4 { 
- border:0 solid #fff; 
+h4 {
+ border:0 solid #fff;
  border-bottom-width:1px;
  padding-bottom:10px;
  text-align: center;

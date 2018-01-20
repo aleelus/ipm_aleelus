@@ -2,7 +2,7 @@
 
 session_start();
 
-$connect = mysql_connect("localhost","root",PASSWORD("monografia"),"ipm_ale");
+$connect = mysql_connect("127.0.0.1:8383","root",PASSWORD("monografia"),"ipm_ale");
 
 if(isset($_POST["user"]) && isset($_POST["password"])){
     $user = mysqli_real_escape_string($connect, $_POST["user"]);    
@@ -21,5 +21,3 @@ if(isset($_POST["user"]) && isset($_POST["password"])){
 }else{
     echo "error";
 }
-
-?>
