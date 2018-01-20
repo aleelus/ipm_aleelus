@@ -72,14 +72,12 @@ if(isset($_SESSION["user"])){
 				<div class="col-md-4 col-md-offset-7">
                                     <div class="form-login">
                                         <h4>Bienvenido</h4>
-                                        <input type="text" id="user" class="form-control input-sm chat-input" placeholder="user" />
+                                        <input type="text" id="user" class="form-control input-sm"/>
                                         </br>
-                                        <input type="password" id="password" class="form-control input-sm chat-input" placeholder="password" />
+                                        <input type="password" id="password" class="form-control input-sm"/>
                                         </br>
-                                        <div class="wrapper">
-                                            <span class="group-btn">     
-                                                    <input type="button" name="login" class="btn btn-primary btn-sm">login <i class="fa fa-sign-in"></i>
-                                            </span>
+                                        <div class="wrapper">                                                
+                                            <input type="button" name="login" value="Login" class="btn btn-primary btn-sm">                                            
                                         </div>
                                     </div>
                                     <span id="result"></span>
