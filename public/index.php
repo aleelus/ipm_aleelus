@@ -77,7 +77,7 @@ if(isset($_SESSION["user"])){
                                         <input type="password" id="password" class="form-control input-sm"/>
                                         </br>
                                         <div class="wrapper">                                                
-                                            <input type="button" name="login" value="Login" class="btn btn-primary btn-sm">                                            
+                                            <input type="button" name="login" id="login" value="Login" class="btn btn-primary btn-sm">                                            
                                         </div>
                                     </div>
                                     <span id="result"></span>
