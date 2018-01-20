@@ -8,7 +8,7 @@ if(isset($_POST["user"]) && isset($_POST["password"])){
     $user = mysqli_real_escape_string($connect, $_POST["user"]);    
     $password = mysqli_real_escape_string($connect, $_POST["password"]);
     
-    $sql = "SELECT Username FROM Usuario WHERE Username='$user' && Password='PASSWORD('$pass')'";
+    $sql = "SELECT Username FROM Usuario WHERE Username='$user' && Password='PASSWORD('$password')'";
     $result = mysqli_query($connect, $sql);
     $num_row = mysqli_num_rows($result);
     if($num_row=="1"){
