@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="custom.css">
   </head>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="/component/peer.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js" /></script>
