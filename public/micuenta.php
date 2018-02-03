@@ -11,7 +11,8 @@
 		<title>Mi cuenta</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
 
 
 	</head>
@@ -28,7 +29,8 @@
 										<ul>
 											<li><a href="micuenta.php">Home</a></li>
 											<li><a href="mismonedas.php">Mis monedas</a></li>
-											<li><a href="logout.php">Salir</a></li>
+                      <li><a href="calculadora.php">Calculadora</a></li>
+											<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
 										</ul>
 									</div>
 								</li>
@@ -39,8 +41,8 @@
 
 					<section id="banner">
 						<div class="inner">
-							<h2>Ale- Exchange(?)</h2>
-							<p>Larga la guita guach@</p>
+							<h2>Ale - Exchange(?)</h2>
+							<p>Largá la guita guach@</p>
 						</div>
 						<a href="#uno" class="more scrolly">¯\_(ツ)_/¯</a>
 					</section>
@@ -49,8 +51,8 @@
 					<section id="uno" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Aca va a ir algo pero no se que</h2>
-								<p>Sarasasarasarasrsasraras</p>
+								<h2>Acá va a ir algo pero no se que</h2>
+								<p>sarasararasrsarasrasrsarasrasrasrasrsa</p>
 							</header>
 						</div>
 					</section>

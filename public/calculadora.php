@@ -1,34 +1,15 @@
 <?php
-include('conexion.php');
+
 session_start();
 if(!isset($_SESSION['user']))
 {
      header("location:micuenta.php");
-}else{
-  $mysqli->set_charset('utf8');
-
-  $idUsuario = $_SESSION['idUsuario'];
-
-  if($nueva_consulta = $mysqli->prepare("SELECT CantidadTokens FROM iota_tokens WHERE IdUsuario=?")){
-      $nueva_consulta->bind_param('s',$idUsuario);
-      $nueva_consulta->execute();
-
-      $resultado = $nueva_consulta->get_result();
-
-      if($resultado->num_rows==1){
-        $datos = $resultado->fetch_assoc();
-        $_SESSION['cantidadTokens'] =  $datos["CantidadTokens"];
-
-      }
-      $nueva_consulta->close();
-  }
 }
-
 ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Mis monedas</title>
+		<title>Calculadora</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -63,24 +44,17 @@ if(!isset($_SESSION['user']))
 						<header>
 							<h2><?php echo $_SESSION['user']?></h2>
 						</header>
-						<section class="wrapper style5">
+						<section class="wrapper style1 special">
+              <h3>Calculadora</h3>
 							<div class="inner">
                 <div class="row">
-                  <?php
-                  if(isset($_SESSION['cantidadTokens'])){
-                    echo '<div class="col-md-12 col-md-offset-4">';
-                    echo '<h1>Tenes '.$_SESSION['cantidadTokens'].' Miotas</h1>';
-                    echo '<div class="coinmarketcap-currency-widget" data-currency="iota" data-base="USD"></div>';
-                    echo '</div>';
-                  }else{
-                    echo '<div class="col-md-12">';
-                    echo "<p>NO TENES NIGUN TOKEN</p>";
-                    echo '</div>';
-                  }
-                  ?>
-
+                  <div class="col-md-4">
+                    <input type="text" name="user" id="user" pattern="[0-9]{1,15}"  required class="form-control input-lg" placeholder="Cantidad a invertir (AR$)"/>
+                  </div>
+                  <div class="col-md-8">
+                    <p>(☞ﾟヮﾟ)☞ Aca va la cantidad de miotas equivalentes ☜(ﾟヮﾟ☜)</p>
+                  </div>
                 </div>
-
 							</div>
 						</section>
 					</article>
