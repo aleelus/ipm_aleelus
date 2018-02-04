@@ -36,7 +36,8 @@ include('validarLogin.php');
   				</div>
         </div>
 			</div>
-		</div>
+		</div>  
 	</div>
+
 </body>
 </html>
