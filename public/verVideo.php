@@ -28,7 +28,7 @@ if(!isset($_SESSION['user']))
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Mis monedas</title>
+		<title>Ver Video</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -50,7 +50,7 @@ if(!isset($_SESSION['user']))
                     <li><a href="micuenta.php">Home</a></li>
                     <li><a href="mismonedas.php">Mis monedas</a></li>
                     <li><a href="calculadora.php">Calculadora</a></li>
-                    <li><a href="youtube.php">YouTube</a></li>
+                    <li><a href="yt.php">YouTube</a></li>
                     <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
                   </ul>
                 </div>
@@ -69,14 +69,12 @@ if(!isset($_SESSION['user']))
               echo '<div class="row">';
 
               $url = "https://www.youtube.com/watch?v=".$_GET['link'];
-		$comando = 'youtube-dl -f mp4 "'.$url.'" -o "'.$_GET['link'].'.mp4"';
+              $comando = 'youtube-dl -f mp4 "'.$url.'" -o "'.$_GET['link'].'.mp4"';
+              $queryYT = shell_exec($comando);
 
-	      $queryYT = shell_exec($comando);
-		
               echo '<video class="center" width="640" height="480" controls>';
               echo '<source src="'.$_GET['link'].'.mp4" type="video/mp4">';
               echo '</video>';
-
               echo "</div>";
 
               ?>
@@ -97,6 +95,6 @@ if(!isset($_SESSION['user']))
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-      <script src="assets/js/precio.js"></script>
+      
 	</body>
 </html>

@@ -30,7 +30,7 @@
 											<li><a href="micuenta.php">Home</a></li>
 											<li><a href="mismonedas.php">Mis monedas</a></li>
                       <li><a href="calculadora.php">Calculadora</a></li>
-                      <li><a href="youtube.php">YouTube</a></li>
+                      <li><a href="yt.php">YouTube</a></li>
 											<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
 										</ul>
 									</div>

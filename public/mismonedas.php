@@ -50,7 +50,7 @@ if(!isset($_SESSION['user']))
                     <li><a href="micuenta.php">Home</a></li>
                     <li><a href="mismonedas.php">Mis monedas</a></li>
                     <li><a href="calculadora.php">Calculadora</a></li>
-                    <li><a href="youtube.php">YouTube</a></li>
+                    <li><a href="yt.php">YouTube</a></li>
                     <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
                   </ul>
                 </div>
@@ -58,6 +58,8 @@ if(!isset($_SESSION['user']))
             </ul>
           </nav>
         </header>
+
+
 
 				<!-- Main -->
 					<article id="main">
@@ -71,7 +73,17 @@ if(!isset($_SESSION['user']))
                   if(isset($_SESSION['cantidadTokens'])){
                     echo '<div class="col-md-12 col-md-offset-4">';
                     echo '<h1>Tenes '.$_SESSION['cantidadTokens'].' Miotas</h1>';
-                    echo '<div class="coinmarketcap-currency-widget" data-currency="iota" data-base="USD"></div>';
+                    //extrae el precio de iota
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    curl_setopt($ch, CURLOPT_URL, 'https://widgets.coinmarketcap.com/v1/ticker/iota/?convert=USD');
+                    $result = curl_exec($ch);
+                    curl_close($ch);
+                    $obj = json_decode($result);
+                    echo $obj[0]->price_usd*$_SESSION['cantidadTokens'];
+                    ///////////////////////////////////////////////////////////
+
                     echo '</div>';
                   }else{
                     echo '<div class="col-md-12">';
@@ -79,6 +91,7 @@ if(!isset($_SESSION['user']))
                     echo '</div>';
                   }
                   ?>
+
 
                 </div>
 
@@ -97,6 +110,6 @@ if(!isset($_SESSION['user']))
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-      <script src="assets/js/precio.js"></script>
+
 	</body>
 </html>
