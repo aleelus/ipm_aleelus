@@ -71,7 +71,7 @@ if(!isset($_SESSION['user']))
 
                           echo '<div class="row">';
                           echo '<div class="col-md-3">';
-                          echo "<td><img src='".$res['thumbnail']."' height='138' width='248'></td>";
+                          echo "<td><a href='verVideo.php?link=".$res["webpage_url_basename"]."'><img src='".$res['thumbnail']."' height='138' width='248'></a></td>";
                           echo "</div>";
                           echo '<div class="col-md-9">';
                           echo "<td>".$res["title"]."</td>";

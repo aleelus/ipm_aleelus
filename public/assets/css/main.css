@@ -3396,7 +3396,7 @@
 		position: relative;
 		text-align: center;
 	}
-
+	.center { margin: 0 auto; width: 800px; }
 		#banner h2 {
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
