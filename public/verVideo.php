@@ -5,7 +5,7 @@ if(!isset($_SESSION['user']))
 {
      header("location:micuenta.php");
 }else{
-  $mysqli->set_charset('utf8');
+  $mysqli->set_charset('utf-8');
 
   $idUsuario = $_SESSION['idUsuario'];
 
@@ -69,8 +69,10 @@ if(!isset($_SESSION['user']))
               echo '<div class="row">';
 
               $url = "https://www.youtube.com/watch?v=".$_GET['link'];
-              $queryYT =shell_exec('youtube-dl -f mp4 '.$url.' -o '.$_GET['link'].'.mp4');
+		$comando = 'youtube-dl -f mp4 "'.$url.'" -o "'.$_GET['link'].'.mp4"';
 
+	      $queryYT = shell_exec($comando);
+		
               echo '<video class="center" width="640" height="480" controls>';
               echo '<source src="'.$_GET['link'].'.mp4" type="video/mp4">';
               echo '</video>';
