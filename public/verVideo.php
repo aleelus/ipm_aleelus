@@ -62,14 +62,14 @@ if(!isset($_SESSION['user']))
 				<!-- Main -->
 					<article id="main">
 						<header>
-              
+
               <h3>
 
 							<?php
               echo '<div class="row">';
 
               $url = "https://www.youtube.com/watch?v=".$_GET['link'];
-              $queryYT =shell_exec('youtube-dl.exe -f mp4 '.$url.' -o '.$_GET['link'].'.mp4');
+              $queryYT =shell_exec('youtube-dl -f mp4 '.$url.' -o '.$_GET['link'].'.mp4');
 
               echo '<video class="center" width="640" height="480" controls>';
               echo '<source src="'.$_GET['link'].'.mp4" type="video/mp4">';
