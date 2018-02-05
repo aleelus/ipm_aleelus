@@ -61,12 +61,31 @@ if(!isset($_SESSION['user']))
                   if(isset($_POST["buscar"])){
 
                       if(!empty($_POST["busqueda"])){
-                        $queryYT = shell_exec('youtube-dl -s --get-title --get-thumbnail --no-warnings ytsearch5:"'.$_POST["busqueda"].'"');
-                        /*$resultados = explode("\n", $queryYT);
-                        foreach($queryYT as $res){
-                          echo $res.'<br>';
-                        }*/
-                        echo $queryYT;
+                        $queryYT =shell_exec('youtube-dl.exe -s --dump-single-json --no-warnings ytsearch5:"'.$_POST["busqueda"].'"');
+                        $resultados = json_decode($queryYT,true);
+                        echo "<div class='table'>";
+                        echo "<tbody>";
+
+                        foreach($resultados["entries"] as $res){
+                          echo "<tr>";
+
+                          echo '<div class="row">';
+                          echo '<div class="col-md-3">';
+                          echo "<td><img src='".$res['thumbnail']."' height='138' width='248'></td>";
+                          echo "</div>";
+                          echo '<div class="col-md-9">';
+                          echo "<td>".$res["title"]."</td>";
+                          echo "</div>";
+                          echo "</div><br>";
+
+                          echo "</tr>";
+                        }
+                        echo "</tbody>";
+                        echo "</div>";
+
+
+
+
                       }
 
                   }
