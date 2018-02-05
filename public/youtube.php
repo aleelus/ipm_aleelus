@@ -61,7 +61,7 @@ if(!isset($_SESSION['user']))
                   if(isset($_POST["buscar"])){
 
                       if(!empty($_POST["busqueda"])){
-                        $queryYT =shell_exec('youtube-dl.exe -s --dump-single-json --no-warnings ytsearch5:"'.$_POST["busqueda"].'"');
+                        $queryYT =shell_exec('youtube-dl -s --dump-single-json --no-warnings ytsearch5:"'.$_POST["busqueda"].'"');
                         $resultados = json_decode($queryYT,true);
                         echo "<div class='table'>";
                         echo "<tbody>";
