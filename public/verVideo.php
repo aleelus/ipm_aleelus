@@ -69,7 +69,7 @@ if(!isset($_SESSION['user']))
               echo '<div class="row">';
 
               $url = "https://www.youtube.com/watch?v=".$_GET['link'];
-              $comando = 'youtube-dl.exe -f webm "'.$url.'" -o "'.$_GET['link'].'.webm"';
+              $comando = 'youtube-dl -f webm "'.$url.'" -o "'.$_GET['link'].'.webm"';
               $queryYT = shell_exec($comando);
               /*
               echo '<video class="center" width="640" height="480" controls>';
