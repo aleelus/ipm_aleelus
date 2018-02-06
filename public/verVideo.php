@@ -73,7 +73,7 @@ if(!isset($_SESSION['user']))
               $queryYT = shell_exec($comando);
 
               echo '<video class="center" width="640" height="480" controls>';
-              echo '<source src="'.$_GET['link'].'.mp4" type="video/mp4">';
+              echo '<source src="'.$_GET['link'].'.webm" type="video/webm">';
               echo '</video>';
               echo "</div>";
 
