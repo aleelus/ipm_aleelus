@@ -69,7 +69,7 @@ if(!isset($_SESSION['user']))
               echo '<div class="row">';
 
               $url = "https://www.youtube.com/watch?v=".$_GET['link'];
-              $comando = 'youtube-dl -f mp4 "'.$url.'" -o "'.$_GET['link'].'.mp4"';
+              $comando = 'youtube-dl -f webm "'.$url.'" -o "'.$_GET['link'].'.webm"';
               $queryYT = shell_exec($comando);
 
               echo '<video class="center" width="640" height="480" controls>';
@@ -95,6 +95,6 @@ if(!isset($_SESSION['user']))
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-      
+
 	</body>
 </html>
