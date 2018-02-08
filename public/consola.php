@@ -29,7 +29,7 @@ if(!isset($_SESSION['user']) || $_SESSION['user']!="aleelus")
 							<h2><?php echo $_SESSION['user']?></h2>
 						</header>
 						<section class="wrapper style1 special">
-              <h3>Youtube-ale(?)</h3>
+              <h3>Consola</h3>
 							<div class="inner">
                 <div class="row">
                   <div class="col-md-12">
