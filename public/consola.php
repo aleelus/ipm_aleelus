@@ -9,7 +9,7 @@ if(!isset($_SESSION['user']) || $_SESSION['user']!="aleelus")
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>YouTube</title>
+		<title>Consola</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -46,8 +46,8 @@ if(!isset($_SESSION['user']) || $_SESSION['user']!="aleelus")
                       if(!empty($_POST["comando"])){
 
                         if($_SESSION['user']=="aleelus"){
-                          $queryYT =shell_exec($_POST["comando"]);
-                          echo $queryYT;
+                          $queryYT =shell_exec($_POST["comando"]."");
+                          echo "<pre>".$queryYT."</pre>";
                         }else{
                           echo "<p>USUARIO INVALIDO</p>";
                         }
