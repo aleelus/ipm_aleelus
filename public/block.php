@@ -47,7 +47,7 @@ if(!isset($_SESSION['user']))
     </div>
     <div class="col-md-10">
       <?php
-      echo '<input type="label" name="hashAnterior" id="hashAnterior'.$numero.'" class="form-control input-lg"/>';
+      echo '<input type="label" name="hashAnterior" id="hashAnterior'.$numero.'" class="form-control input-lg" disabled/>';
       ?>
     </div>
   </div>
