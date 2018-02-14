@@ -14,6 +14,7 @@
               }
              ?>
             <li><a href="yt.php">YouTube</a></li>
+            <li><a href="blockchain.php">Blockchain</a></li>
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
           </ul>
         </div>

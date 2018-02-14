@@ -1459,7 +1459,7 @@
 		}
 
 	strong, b {
-		color: #fff;
+		color: transparent;
 		font-weight: 600;
 	}
 
@@ -1660,7 +1660,7 @@
 	}
 
 	label {
-		color: #fff;
+		color: #2c74b2;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 600;
@@ -1670,6 +1670,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="label"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -1690,6 +1691,7 @@
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="label"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -1698,6 +1700,7 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="label"]:focus,
 		select:focus,
 		textarea:focus {
 			box-shadow: 0 0 0 2px #21b2a6;
@@ -1742,6 +1745,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="label"],
 	select {
 		height: 2.75em;
 	}
@@ -2684,6 +2688,7 @@
 			.wrapper.style1 input[type="text"],
 			.wrapper.style1 input[type="password"],
 			.wrapper.style1 input[type="email"],
+			.wrapper.style1 input[type="label"],
 			.wrapper.style1 select,
 			.wrapper.style1 textarea {
 				background: rgba(255, 255, 255, 0.075);
@@ -2842,6 +2847,7 @@
 			.wrapper.style3 input[type="text"],
 			.wrapper.style3 input[type="password"],
 			.wrapper.style3 input[type="email"],
+			.wrapper.stlye3 input[type="label"],
 			.wrapper.style3 select,
 			.wrapper.style3 textarea {
 				background: rgba(255, 255, 255, 0.075);
@@ -2958,7 +2964,7 @@
 
 		.wrapper.style5 {
 			background-color: #2c74b2;
-			color: #ffffff;
+			color: #ffffff;		
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
@@ -2966,7 +2972,7 @@
 			}
 
 			.wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
-				color: #2E3842;
+				color: #ffffff;
 			}
 
 			.wrapper.style5 hr {
@@ -3000,10 +3006,11 @@
 			.wrapper.style5 input[type="text"],
 			.wrapper.style5 input[type="password"],
 			.wrapper.style5 input[type="email"],
+			.wrapper.style5 input[type="label"],
 			.wrapper.style5 select,
 			.wrapper.style5 textarea {
-				background: #fff;
-				color: #000
+				background: rgba(255, 255, 255, 0.075);
+				color: #fff
 			}
 
 			.wrapper.style5 .select-wrapper:before {
@@ -3035,11 +3042,11 @@
 			}
 
 			.wrapper.style5 ::-moz-placeholder {
-				color: #8E8892 !important;
+				color: #bcadad !important;
 			}
 
 			.wrapper.style5 :-ms-input-placeholder {
-				color: #8E8892 !important;
+				color: #ffffff !important;
 			}
 
 			.wrapper.style5 .formerize-placeholder {
