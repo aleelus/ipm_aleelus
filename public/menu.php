@@ -6,15 +6,18 @@
         <div id="menu">
           <ul>
             <li><a href="micuenta.php">Home</a></li>
-            <li><a href="mismonedas.php">Mis monedas</a></li>
-            <li><a href="calculadora.php">Calculadora</a></li>
+            <li><a href="blockchain.php">Blockchain</a></li>
             <?php
+              if($_SESSION['user']!="invitado"){
+                echo '<li><a href="yt.phpp">YouTube</a></li>';
+                echo '<li><a href="mismonedas.php">Mis monedas</a></li>';
+                echo '<li><a href="calculadora.php">Calculadora</a></li>';
+              }            
               if($_SESSION['user']=="aleelus"){
                 echo '<li><a href="consola.php">Consola</a></li>';
               }
              ?>
-            <li><a href="yt.php">YouTube</a></li>
-            <li><a href="blockchain.php">Blockchain</a></li>
+
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
           </ul>
         </div>
