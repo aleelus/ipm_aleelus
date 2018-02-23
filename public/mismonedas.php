@@ -62,7 +62,7 @@ if(!isset($_SESSION['user'])|| $_SESSION['user']=="invitado")
                     $result = curl_exec($ch);
                     curl_close($ch);
                     $obj = json_decode($result);
-                    echo $obj[0]->price_usd*$_SESSION['cantidadTokens'];
+                    echo 'USD $'.$obj[0]->price_usd*$_SESSION['cantidadTokens'];
                     ///////////////////////////////////////////////////////////
 
                     echo '</div>';

@@ -9,7 +9,7 @@
             <li><a href="blockchain.php">Blockchain</a></li>
             <?php
               if($_SESSION['user']!="invitado"){
-                echo '<li><a href="yt.phpp">YouTube</a></li>';
+                echo '<li><a href="yt.php">YouTube</a></li>';
                 echo '<li><a href="mismonedas.php">Mis monedas</a></li>';
                 echo '<li><a href="calculadora.php">Calculadora</a></li>';
               }            
