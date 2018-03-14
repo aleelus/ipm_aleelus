@@ -59,7 +59,8 @@ if(!isset($_SESSION['user']) || $_SESSION['user']=="invitado")
 
                         if(isset($_POST["cantInvertir"])){
                           $total_pesos = ($_POST["cantInvertir"]*$comision_ripio_rapipago*$comision_ripio_compra_bitcoin)-$comision_transaccion_bitcoin;
-                          echo 'Obtengo '.round($obj[0]->price_usd*$total_pesos/$data_out['libre'],2).' Miotas';
+                          $total_dolares = $total_pesos/$data_out['libre'];
+                          echo 'Obtengo '.round($obj[0]->price_usd*$total_dolares,2).' Miotas valuados en USD $'.round($total_dolares,2);
                         }
                       }
 
