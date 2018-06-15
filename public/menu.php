@@ -11,6 +11,7 @@
                 echo '<li><a href="yt.php">YouTube</a></li>';
                 echo '<li><a href="mismonedas.php">Mis monedas</a></li>';
                 echo '<li><a href="calculadora.php">Calculadora</a></li>';
+                echo '<li><a href="TangleChat.php">Tangle Chat</a></li>';
               }else{
                 echo '<li><a href="blockchain.php">Blockchain</a></li>';
               }
