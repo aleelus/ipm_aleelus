@@ -42,10 +42,10 @@ if(!isset($_SESSION['user']) || $_SESSION['user']=="invitado")
                 <form name="form" action="" method="post">
                   <div class="row">
                       <div class="col-md-6">
-                          <input type="button" onclick="verificarDoc()"  id="verificarDocumento" value="Verificar Documento" class="button special hover">
+                          <input type="button" onclick="verificarDoc()" disabled id="verificarDocumento" value="Verificar Documento" class="button special hover">
                       </div>
                       <div class="col-md-6">
-                          <input type="button" onclick="ingresarDoc()"  id="ingresarDocumento" value="Ingresar Documento" class="button special hover">
+                          <input type="button" onclick="ingresarDoc()" disabled id="ingresarDocumento" value="Ingresar Documento" class="button special hover">
                       </div>
                   </div>
                   <br>
@@ -57,6 +57,7 @@ if(!isset($_SESSION['user']) || $_SESSION['user']=="invitado")
 															<h3><p id="datoNombreArchivo"></p></h3>
 															<h3><p id="datoTipoArchivo"></p></h3>
 															<h3><p id="datoFecha"></p></h3>
+															<b><p id="datoHashVerificacion"></p><b>
                           </div>
                       </div>
                     </div>
@@ -73,6 +74,7 @@ if(!isset($_SESSION['user']) || $_SESSION['user']=="invitado")
 											<div class="row">
 													<div class="col-md-12">
 															<h2>SE HA INGRESADO EL ARCHIVO!</h2>
+															<p id="datoHash"></p>
 													</div>
 											</div>
 										</div>
@@ -95,8 +97,9 @@ if(!isset($_SESSION['user']) || $_SESSION['user']=="invitado")
 			<script src="assets/js/main.js"></script>
       <script src="assets/js/precio.js"></script>
       <script src="assets/js/iota.min.js"></script>
-			<script src="assets/js/mam.web.js"></script>
-      <script src="assets/js/tanglestamp.js"></script>
+			<script src="assets/js/mam.web.js"></script>			
+			<script src="assets/js/tanglestamp.js"></script>
+
 
 	</body>
 </html>
